@@ -1,0 +1,41 @@
+Use the provided code to solve Sudokus. The file Sudoku.h contains the
+interface. Use the following format for your code:
+
+
+#include "Sudoku.h"
+#include <queue>
+
+ac3() {
+
+}
+
+int main() {
+    Puzzles puz("sudokus.txt");
+    Sudoku sud = puz.nextPuzzle();
+
+    while(sud.valid) {
+        //Your Logic
+	//If it's solveable, print solution
+        sud = puz.nextPuzzle();
+    }
+
+    return 0;
+}
+
+
+
+Note that a Sudoku is indexed using the [] operator with a string as the
+index type.
+
+There are also three potentially useful functions to return the indices
+of all other cells in the same row/column/box as the argument.
+
+Due to popular demand, the source code, Sudoku.cpp, is included. There
+should be no need to alter Sudoku.cpp or Sudoku.h
+
+In partII, it asks for a text file with a printout of all the solutions.
+You should assign values to the sudoku and then use the provided print()
+method to print the results. Then, redirect your output to a file:
+       ./search > file.txt
+MAKE SURE YOU DO NOT PRINT ANYTHING OTHER THAN THIS SINCE WE WILL DIFF
+YOUR OUTPUT WITH OURS
